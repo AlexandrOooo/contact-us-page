@@ -1,0 +1,131 @@
+.header {
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    &__logo {
+        @media (max-width: 360px) {
+            width: 91px;
+            height: 22px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        width: 320px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        @media (max-width: 360px) {
+            display: none;
+        }
+    }
+    &__menu {
+        display: flex;
+        list-style-type: none;
+        margin-right: 13px;
+    }
+    &__item {
+        a {
+            font-family: "Roboto";
+            padding: 5px 23.5px;
+            line-height: 19px;
+            color: #1f1f1f;
+            text-decoration: none;
+            font-weight: 400;
+        }
+        &:active {
+            a {
+                color: black;
+                font-weight: 500;
+            }
+        }
+    }
+    &__cart {
+        margin-right: 36px;
+    }
+}
+.burger-menu {
+    display: none;
+    @media (max-width: 360px) {
+        display: block;
+    }
+    &__btn {
+        width: 18px;
+        height: 12px;
+    }
+}
+.overlay {
+    background-color: black;
+    position: fixed;
+    box-sizing: border-box;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+
+    z-index: 999;
+    padding: 29px 20px 30px 20px;
+
+    &__logo {
+        margin-bottom: 58px;
+        path {
+            fill: #ffffff;
+            width: 91px;
+            height: 22px;
+        }
+    }
+    path {
+        fill: #ffffff;
+    }
+    &__icon {
+        border: 1px solid #fff;
+        transition: 0.4s;
+        path {
+            transition: 0.4s;
+        }
+        &:hover {
+            background-color: white;
+            path {
+                fill: black;
+            }
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 36px;
+    }
+    &__close {
+        position: absolute;
+        right: 20px;
+        top: 29px;
+        cursor: pointer;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+    &__item {
+        a {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #ffffff;
+            text-decoration: none;
+        }
+        &:active {
+            a {
+                font-weight: 500;
+            }
+        }
+    }
+}
