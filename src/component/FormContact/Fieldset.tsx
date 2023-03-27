@@ -22,6 +22,7 @@ const Fieldset: React.FC<FieldsetProps> = ({
             onBlur={() => setIsFocused(false)}
         >
             <label
+                // conditional rendering
                 className={
                     isFocused
                         ? cl["fieldset__label"] + " " + cl["active"]
